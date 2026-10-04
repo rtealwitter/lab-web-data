@@ -88,8 +88,8 @@ def first_link(html):
 def extract_listings(html):
     '''
     Turn a listings page into a list of dicts, one per `.item`, each with the
-    item's `name`, `price_cents`, and `url` -- the exact shape Project 2 saves
-    as JSON.
+    item's `name`, `price_cents`, and `url`. Project 2 uses the same pattern,
+    renames `price_cents` to `price`, and adds other listing fields.
 
     >>> html = '<li class="item"><a class="title" href="/itm/1">Mouse</a><span class="price">$9.99</span></li><li class="item"><a class="title" href="/itm/2">Keyboard</a><span class="price">$19.99</span></li>'
     >>> extract_listings(html)
